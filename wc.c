@@ -30,8 +30,9 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-
+/// @file
 #ifndef lint
+
 static const char copyright[] =
 "@(#) Copyright (c) 1980, 1987, 1991, 1993\n\
 	The Regents of the University of California.  All rights reserved.\n";
@@ -78,7 +79,7 @@ int
 main(int argc, char *argv[])
 {
 	int ch, errors, total;
-
+	/// @param LC_CTYPE
 	(void) setlocale(LC_CTYPE, "");
 
 	while ((ch = getopt(argc, argv, "clmw")) != -1)
@@ -205,6 +206,7 @@ cnt(const char *file)
 			(void)printf(" %7ju", charct);
 		}
 		(void)close(fd);
+		/// @return (0)
 		return (0);
 	}
 	/*
