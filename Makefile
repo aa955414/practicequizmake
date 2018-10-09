@@ -2,6 +2,7 @@
 
 all:
 	make build
+	make doc
 	make doczip
 
 mywc: wc.o
